@@ -32,7 +32,7 @@ namespace Shashki.ComponentsAdder.Editor
 
         private GUIStyle _deleteDataButtonStyle;
 
-        [MenuItem("Shashki assets/Components Adder")]
+        [MenuItem("Window/Shashki assets/Components Adder")]
         public static void ShowWindow()
         {
             var window = GetWindow<ComponentsAdderWindow>("Components Adder");
