@@ -8,6 +8,7 @@ namespace Shashki.ComponentsAdder.Editor
     public class ComponentsDataEditor : UnityEditor.Editor
     {
         private GUIStyle _labelStyle = new();
+        private GUIStyle _dataNameStyle = new();
 
         private string _currentDataName;
 
@@ -31,7 +32,8 @@ namespace Shashki.ComponentsAdder.Editor
 
             EditorGUILayout.LabelField(string.Empty, new GUIStyle(GUI.skin.horizontalSlider));
 
-            EditorGUILayout.LabelField(_currentDataName, new GUIStyle(EditorStyles.label) { fontSize = 18, alignment = TextAnchor.MiddleCenter, normal = new() { textColor = Color.cyan } });
+            float dataNameHeight = _dataNameStyle.CalcHeight(new GUIContent(_currentDataName), EditorGUIUtility.currentViewWidth);
+            EditorGUILayout.LabelField(_currentDataName, new GUIStyle(_dataNameStyle) { fontSize = 18, alignment = TextAnchor.MiddleCenter, normal = new() { textColor = Color.cyan }, fixedHeight = 0 }, GUILayout.Height(dataNameHeight));
 
             EditorGUILayout.LabelField(string.Empty, new GUIStyle(GUI.skin.horizontalSlider));
 

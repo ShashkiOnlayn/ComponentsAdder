@@ -595,12 +595,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'THEN OPEN <color=yellow>Shashki assets -> Components Adder</color>, CHOOSE
+  m_text: THEN OPEN <color=yellow>Shashki Assets -> Components Adder</color>, CHOOSE
     <color=#FE1183>TestData</color> AND SET COMPONENTS FROM TEST OBJECTS IN <color=green>Components</color>
-    IF NOT ALREADY SETTED. THEN SELECT TEST OBJECTS AND PRESS <color=#40E0D0
-
-    >Add
-    components</color> BUTTON'
+    IF NOT ALREADY SETTED. THEN SELECT TEST OBJECTS AND PRESS <color=#40E0D0>Add
+    components</color> BUTTON
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

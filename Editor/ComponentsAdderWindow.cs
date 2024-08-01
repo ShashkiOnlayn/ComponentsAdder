@@ -1,7 +1,6 @@
 using Shashki.ComponentsAdder.Data;
 using System.Collections.Generic;
 using System.Linq;
-using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 
@@ -32,7 +31,7 @@ namespace Shashki.ComponentsAdder.Editor
 
         private GUIStyle _deleteDataButtonStyle;
 
-        [MenuItem("Window/Shashki assets/Components Adder")]
+        [MenuItem("Window/Shashki Assets/Components Adder")]
         public static void ShowWindow()
         {
             var window = GetWindow<ComponentsAdderWindow>("Components Adder");
@@ -222,7 +221,8 @@ namespace Shashki.ComponentsAdder.Editor
                             {
                                 if (script != null)
                                 {
-                                    if (script.GetClass().IsStatic())
+                                    var scriptType = script.GetClass();
+                                    if (scriptType.IsAbstract && scriptType.IsSealed)
                                     {
                                         Debug.LogError("Scripts cannot be static! (script: " + script.GetClass() + ")");
                                         _scriptsAreInvalid = true;
